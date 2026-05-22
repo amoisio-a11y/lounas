@@ -1,6 +1,6 @@
-# 🍽️ OP Kortteli Lounas RSS
+# 🍽️ Lounas RSS
 
-Hakee automaattisesti päivän lounasmenut OP Korttelissa Vallilassa ja julkaisee ne RSS-feedinä.
+Hakee automaattisesti päivän lounasmenut Vallilassa ja julkaisee ne RSS-feedinä.
 
 ## Ravintolat
 
