@@ -21,8 +21,6 @@ jobs:
           python-version: "3.12"
 
       - name: Aja skripti
-        env:
-          BROWSERLESS_API_KEY: ${{ secrets.BROWSERLESS_API_KEY }}
         run: python lounas_scraper.py
 
       - name: Tulosta loki
