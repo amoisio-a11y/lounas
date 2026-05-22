@@ -1,15 +1,13 @@
-name: Päivitä lounasmenu
+name: Lähetä lounasmenu sähköpostilla
 
 on:
   schedule:
-    - cron: "30 7 * * 1-5"
-  workflow_dispatch:
+    - cron: "30 7 * * 1-5"   # klo 10:30 Helsinki (EEST = UTC+3)
+  workflow_dispatch:          # manuaalinen ajo tarvittaessa
 
 jobs:
-  scrape-and-publish:
+  send-lunch-email:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repo
@@ -20,17 +18,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Aja skripti
+      - name: Aja skripti ja lähetä sähköposti
+        env:
+          GMAIL_SENDER:       ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python lounas_scraper.py
-
-      - name: Tulosta loki
-        if: always()
-        run: cat lounas.xml
-
-      - name: Commitoi päivitetty RSS
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add lounas.xml lounas_history.json
-          git diff --staged --quiet || git commit -m "🍽️ Lounas $(date +'%d.%m.%Y')"
-          git push
