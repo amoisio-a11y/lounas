@@ -1,0 +1,44 @@
+name: Päivitä lounasmenu
+
+on:
+  schedule:
+    - cron: "30 7 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  scrape-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Asenna Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.12"
+
+      - name: Aja skripti
+        run: python lounas_scraper.py
+
+      - name: Tulosta debug-tiedostot lokkiin
+        if: always()
+        run: |
+          echo "====== debug_hella.html ======"
+          cat debug_hella.html || echo "(tiedostoa ei löydy)"
+          echo ""
+          echo "====== debug_tori.html ======"
+          cat debug_tori.html || echo "(tiedostoa ei löydy)"
+          echo ""
+          echo "====== lounas.xml ======"
+          cat lounas.xml
+
+      - name: Commitoi päivitetty RSS
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lounas.xml lounas_history.json
+          git diff --staged --quiet || git commit -m "🍽️ Lounas $(date +'%d.%m.%Y')"
+          git push
