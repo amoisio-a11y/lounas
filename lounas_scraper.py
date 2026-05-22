@@ -354,7 +354,7 @@ def main():
     sender_email = os.environ["GMAIL_SENDER"]
     app_password = os.environ["GMAIL_APP_PASSWORD"]
 
-    print(f"\nLähetetään sähköposti → {RECIPIENT} ...")
+    print(f"\nLähetetään sähköposti → {RECIPIENTS} ...")
     send_email(subject, html_body, sender_email, app_password)
     print("✓ Sähköposti lähetetty.")
 
