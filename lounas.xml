@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>OP Kortteli &amp; Antell Vallila — Päivän lounaat</title>
+    <link>https://www.soupsterkortteli.fi</link>
+    <description>Päivittäin klo 10.30 päivitetty lounaslista: Pannu, Kulho, Uuni, Antell Hella, Antell Tori</description>
+    <language>fi</language>
+    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <ttl>1440</ttl>
+    <item>
+      <title>Feedi aktivoituu ensimmäisen automaattiajon jälkeen</title>
+      <link>https://www.soupsterkortteli.fi</link>
+      <description><![CDATA[Lounasmenu päivittyy automaattisesti seuraavana arkipäivänä klo 10.30.]]></description>
+      <pubDate>Thu, 01 Jan 2026 07:30:00 +0000</pubDate>
+      <guid isPermaLink="false">placeholder-init</guid>
+    </item>
+  </channel>
+</rss>
