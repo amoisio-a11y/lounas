@@ -21,19 +21,13 @@ jobs:
           python-version: "3.12"
 
       - name: Aja skripti
+        env:
+          BROWSERLESS_API_KEY: ${{ secrets.BROWSERLESS_API_KEY }}
         run: python lounas_scraper.py
 
-      - name: Tulosta debug-tiedostot lokkiin
+      - name: Tulosta loki
         if: always()
-        run: |
-          echo "====== debug_hella.html ======"
-          cat debug_hella.html || echo "(tiedostoa ei löydy)"
-          echo ""
-          echo "====== debug_tori.html ======"
-          cat debug_tori.html || echo "(tiedostoa ei löydy)"
-          echo ""
-          echo "====== lounas.xml ======"
-          cat lounas.xml
+        run: cat lounas.xml
 
       - name: Commitoi päivitetty RSS
         run: |
