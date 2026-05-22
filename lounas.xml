@@ -5,14 +5,42 @@
     <link>https://www.soupsterkortteli.fi</link>
     <description>Päivittäin klo 10.30 päivitetty lounaslista: Pannu, Kulho, Uuni, Antell Hella, Antell Tori</description>
     <language>fi</language>
-    <lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 09:30:39 +0000</lastBuildDate>
     <ttl>1440</ttl>
     <item>
-      <title>Feedi aktivoituu ensimmäisen automaattiajon jälkeen</title>
-      <link>https://www.soupsterkortteli.fi</link>
-      <description><![CDATA[Lounasmenu päivittyy automaattisesti seuraavana arkipäivänä klo 10.30.]]></description>
-      <pubDate>Thu, 01 Jan 2026 07:30:00 +0000</pubDate>
-      <guid isPermaLink="false">placeholder-init</guid>
+      <title>22.05.2026 – Antell Tori</title>
+      <link>https://antell.fi/lounas/helsinki/tori/?print_lunch_list_week=1</link>
+      <description><![CDATA[<b>(Päivän menu ei löytynyt — tarkista sivu manuaalisesti.)</b>]]></description>
+      <pubDate>Fri, 22 May 2026 12:28:34 +0000</pubDate>
+      <guid isPermaLink="false">https://antell.fi/lounas/helsinki/tori/?print_lunch_list_week=1-2026-05-22</guid>
+    </item>
+    <item>
+      <title>22.05.2026 – Antell Hella</title>
+      <link>https://antell.fi/lounas/helsinki/hella/?print_lunch_list_week=1</link>
+      <description><![CDATA[<b>(Päivän menu ei löytynyt — tarkista sivu manuaalisesti.)</b>]]></description>
+      <pubDate>Fri, 22 May 2026 12:28:34 +0000</pubDate>
+      <guid isPermaLink="false">https://antell.fi/lounas/helsinki/hella/?print_lunch_list_week=1-2026-05-22</guid>
+    </item>
+    <item>
+      <title>22.05.2026 – Uuni – Soupster OP Kortteli</title>
+      <link>https://www.soupsterkortteli.fi/uuni</link>
+      <description><![CDATA[<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to "https://www.soupsterkortteli.fi/uuni", waiting until "networkidle"<br>)]]></description>
+      <pubDate>Fri, 22 May 2026 12:28:34 +0000</pubDate>
+      <guid isPermaLink="false">https://www.soupsterkortteli.fi/uuni-2026-05-22</guid>
+    </item>
+    <item>
+      <title>22.05.2026 – Kulho – Soupster OP Kortteli</title>
+      <link>https://www.soupsterkortteli.fi/kulho</link>
+      <description><![CDATA[<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to "https://www.soupsterkortteli.fi/kulho", waiting until "networkidle"<br>)]]></description>
+      <pubDate>Fri, 22 May 2026 12:28:34 +0000</pubDate>
+      <guid isPermaLink="false">https://www.soupsterkortteli.fi/kulho-2026-05-22</guid>
+    </item>
+    <item>
+      <title>22.05.2026 – Pannu – Soupster OP Kortteli</title>
+      <link>https://www.soupsterkortteli.fi/pannu</link>
+      <description><![CDATA[<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to "https://www.soupsterkortteli.fi/pannu", waiting until "networkidle"<br>)]]></description>
+      <pubDate>Fri, 22 May 2026 12:28:34 +0000</pubDate>
+      <guid isPermaLink="false">https://www.soupsterkortteli.fi/pannu-2026-05-22</guid>
     </item>
   </channel>
 </rss>

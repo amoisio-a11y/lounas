@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "title": "22.05.2026 – Pannu – Soupster OP Kortteli",
+    "description": "<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to \"https://www.soupsterkortteli.fi/pannu\", waiting until \"networkidle\"<br>)",
+    "link": "https://www.soupsterkortteli.fi/pannu",
+    "pub_date": "2026-05-22T12:28:34.972249+03:00"
+  },
+  {
+    "title": "22.05.2026 – Kulho – Soupster OP Kortteli",
+    "description": "<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to \"https://www.soupsterkortteli.fi/kulho\", waiting until \"networkidle\"<br>)",
+    "link": "https://www.soupsterkortteli.fi/kulho",
+    "pub_date": "2026-05-22T12:28:34.972249+03:00"
+  },
+  {
+    "title": "22.05.2026 – Uuni – Soupster OP Kortteli",
+    "description": "<b>(Virhe: Page.goto: Timeout 40000ms exceeded.</b><br>Call log:<br>  - navigating to \"https://www.soupsterkortteli.fi/uuni\", waiting until \"networkidle\"<br>)",
+    "link": "https://www.soupsterkortteli.fi/uuni",
+    "pub_date": "2026-05-22T12:28:34.972249+03:00"
+  },
+  {
+    "title": "22.05.2026 – Antell Hella",
+    "description": "<b>(Päivän menu ei löytynyt — tarkista sivu manuaalisesti.)</b>",
+    "link": "https://antell.fi/lounas/helsinki/hella/?print_lunch_list_week=1",
+    "pub_date": "2026-05-22T12:28:34.972249+03:00"
+  },
+  {
+    "title": "22.05.2026 – Antell Tori",
+    "description": "<b>(Päivän menu ei löytynyt — tarkista sivu manuaalisesti.)</b>",
+    "link": "https://antell.fi/lounas/helsinki/tori/?print_lunch_list_week=1",
+    "pub_date": "2026-05-22T12:28:34.972249+03:00"
+  }
+]
