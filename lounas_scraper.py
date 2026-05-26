@@ -14,6 +14,7 @@ from email.mime.text import MIMEText
 
 HELSINKI     = timezone(timedelta(hours=3))
 WEEKDAYS     = ("maanantai", "tiistai", "keskiviikko", "torstai", "perjantai")
+WEEKDAYS_GEN = ("Maanantain", "Tiistain", "Keskiviikon", "Torstain", "Perjantain")
 
 RECIPIENTS   = ["aleksi.moisio@op.fi"]
 SENDER       = "postimestari777@gmail.com"
@@ -225,7 +226,7 @@ def build_restaurant_card(r, menu):
 
 
 def build_email_html(today, restaurants_menus):
-    day_name = WEEKDAYS[today.weekday()].capitalize()
+    day_name = WEEKDAYS_GEN[today.weekday()]
     date_str = today.strftime("%-d.%-m.%Y")
     cards    = "\n".join(build_restaurant_card(r, m) for r, m in restaurants_menus)
 
@@ -356,7 +357,7 @@ def main():
             print(f"VIRHE: {e}")
         restaurants_menus.append((r, menu))
 
-    day_name = WEEKDAYS[today.weekday()].capitalize()
+    day_name = WEEKDAYS_GEN[today.weekday()]
     date_str = today.strftime("%-d.%-m.%Y")
     subject  = f"Lounaat {date_str} ({day_name})"
     html_body = build_email_html(today, restaurants_menus)
