@@ -256,7 +256,7 @@ def build_email_html(today, restaurants_menus):
             </div>
             <div style="color:{COLORS['header_text']};font-size:24px;
                         font-weight:700;font-family:Arial,sans-serif;">
-              {day_name}in lounas &mdash; {date_str}
+              {day_name} lounas &mdash; {date_str}
             </div>
           </td>
         </tr>
