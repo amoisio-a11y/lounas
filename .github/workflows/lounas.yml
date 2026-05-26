@@ -1,9 +1,10 @@
-name: Lähetä lounasmenu sähköpostilla
+name: Laheta lounasmenu sahkopostilla
 
 on:
   schedule:
-    - cron: "30 7 * * 1-5"   # klo 10:30 Helsinki (EEST = UTC+3)
-  workflow_dispatch:          # manuaalinen ajo tarvittaessa
+    - cron: "30 7 * * 1-5"   # 10:30 Helsinki (EEST = UTC+3)
+    - cron: "00 8 * * 1-5"   # 11:00 Helsinki — varmuusajo jos 10:30 viivastyi
+  workflow_dispatch:
 
 jobs:
   send-lunch-email:
@@ -18,8 +19,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Aja skripti ja lähetä sähköposti
+      - name: Aja skripti ja laheta sahkoposti
         env:
-          GMAIL_SENDER:       ${{ secrets.GMAIL_SENDER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python lounas_scraper.py
