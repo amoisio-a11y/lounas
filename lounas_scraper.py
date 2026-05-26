@@ -295,7 +295,7 @@ def send_email(subject, html_body, app_password):
     msg["Subject"] = subject
     msg["From"]    = f"Lounaslista <{SENDER}>"
     msg["To"]      = ", ".join(RECIPIENTS)
-    msg.attach(MIMEText(html_body, "utf-8"))
+    msg.attach(MIMEText(html_body, "html", "utf-8"))
 
     print(f"  Yhdistetaan smtp.gmail.com:465 ...")
     try:
