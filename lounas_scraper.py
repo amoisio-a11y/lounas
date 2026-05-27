@@ -325,18 +325,7 @@ def main():
         print("Viikonloppu — ei ajeta.")
         return
 
-    # Aikaikkunatarkistus: ohitetaan jos manuaalinen ajo (workflow_dispatch)
-    is_manual = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
-    utc_now     = datetime.now(timezone.utc)
-    utc_minutes = utc_now.hour * 60 + utc_now.minute
-    window_start = 7 * 60        # 07:00 UTC = 10:00 Helsinki EEST
-    window_end   = 8 * 60 + 29   # 08:29 UTC = 11:29 Helsinki EEST
-    if not is_manual and not (window_start <= utc_minutes <= window_end):
-        print(f"Ajo UTC {utc_now.strftime('%H:%M')} on aikaikkunan ulkopuolella "
-              f"(07:00-08:29 UTC). Skipataan.")
-        return
-    if is_manual:
-        print(f"Manuaalinen ajo — aikaikkunatarkistus ohitetaan.")
+
 
 
     print(f"Haetaan lounaat: {today.strftime('%d.%m.%Y')} ({today_fi})")
