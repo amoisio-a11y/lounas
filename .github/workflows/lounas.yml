@@ -3,7 +3,6 @@ name: Laheta lounasmenu sahkopostilla
 on:
   schedule:
     - cron: "30 7 * * 1-5"   # 10:30 Helsinki (EEST = UTC+3)
-    - cron: "00 8 * * 1-5"   # 11:00 Helsinki — varmuusajo jos 10:30 viivastyi
   workflow_dispatch:
 
 jobs:
