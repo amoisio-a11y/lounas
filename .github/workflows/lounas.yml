@@ -3,9 +3,6 @@ name: Laheta lounasmenu sahkopostilla
 on:
   schedule:
     - cron: "30 6 * * 1-5"   # 09:30 Helsinki (EEST = UTC+3)
-                               # Tunnin puskuri GitHubin jonoviiveelle.
-                               # GitHub lupaa kaynnistyksen 1h sisalla — viesti
-                               # lahetetaan viimeistaan n. 10:30, yleensa n. 09:30-09:45.
   workflow_dispatch:
 
 jobs:
@@ -24,4 +21,5 @@ jobs:
       - name: Aja skripti ja laheta sahkoposti
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENTS:         ${{ secrets.RECIPIENTS }}
         run: python lounas_scraper.py
