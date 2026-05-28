@@ -16,7 +16,8 @@ HELSINKI     = timezone(timedelta(hours=3))
 WEEKDAYS     = ("maanantai", "tiistai", "keskiviikko", "torstai", "perjantai")
 WEEKDAYS_GEN = ("Maanantain", "Tiistain", "Keskiviikon", "Torstain", "Perjantain")
 
-RECIPIENTS   = ["aleksi.moisio@op.fi"]
+# Vastaanottajat luetaan ympäristömuuttujasta (GitHub Secret RECIPIENTS)
+RECIPIENTS = [r.strip() for r in os.environ["RECIPIENTS"].split(",") if r.strip()]
 SENDER       = "postimestari777@gmail.com"
 
 PANNU_RSS_URL = (
