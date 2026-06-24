@@ -1,9 +1,9 @@
 name: Laheta lounasmenu sahkopostilla
 
 on:
-  schedule:
-    - cron: "30 6 * * 1-5"   # 09:30 Helsinki (EEST = UTC+3)
-  workflow_dispatch:
+  repository_dispatch:
+    types: [send-lunch]    # kaynnistyy HTTP-kutsulla cron-job.orgista
+  workflow_dispatch:        # ja manuaalisesti GitHubin kayttoliittymasta
 
 jobs:
   send-lunch-email:
